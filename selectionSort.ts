@@ -2,13 +2,12 @@ function selectionSort(arr:number[]) {
     for (let i = 0; i < arr.length-1; i++) {
         let min = i
         for (let j = i+1; j < arr.length; j++) {
-            if (arr[j]<arr[min]){
+            if (arr[j] < arr[min]) {
                 min = j
             }
-        }if (min!==i){
-            [arr[i],arr[min]]=[arr[min],arr[i]]
         }
+        [arr[i],arr[min]]=[arr[min],arr[i]]
     }return arr
 }
-let arr=[9,3,6,89,34,2,5,52,834];
+let arr=[1,4,6,81,3,23,65];
 console.log(selectionSort(arr))
